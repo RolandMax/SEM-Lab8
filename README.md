@@ -6,6 +6,4 @@ handout - https://garberadamc.github.io/project-site/Lab8-Intro-mixture
 course materials - https://garberadamc.github.io/project-site/
 
 
-# ![](figures/tidy_workflow_hex.png)
-
-<img src="figures/tidy_workflow_hex.png" width="48">
+<img src="figures/tidy_workflow_hex.png" width="500">
