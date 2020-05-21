@@ -1,9 +1,9 @@
 # SEM-Lab8
 Introduction to Mixtures - University of California, Santa Barbara - Structural Equation Modeling, ED216F 
 
-handout here - https://garberadamc.github.io/project-site/Lab7-ten-growth-models
+handout - https://garberadamc.github.io/project-site/Lab8-Intro-mixture
 
-course materials here - https://garberadamc.github.io/project-site/
+course materials - https://garberadamc.github.io/project-site/
 
 
 ![](figures/tidyMplus_hex.png)
