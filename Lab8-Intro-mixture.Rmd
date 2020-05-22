@@ -1,18 +1,31 @@
 
 ---
-title: "Lab 8 - Introduction to Mixture Models - Latent Class Analysis"
+title: "Lab 8 - Introduction to Mixture Models"
 author: "*Adam Garber*"
 subtitle: 'Structural Equation Modeling - Instructor: Karen Nylund-Gibson'
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 output: 
-
+  prettydoc::html_pretty:
+    theme: architect
+    highlight: github
+    toc: yes
 ---
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, eval = FALSE, message = FALSE, warning = FALSE, tidy = TRUE)
+library(hrbrthemes)
+library(prettydoc)
+library(poLCA)
+library(here)
 ```
 
 `University of California, Santa Barbara`
+
+```{r, echo=FALSE, eval=TRUE, out.width = "60%", out.height= "60%", fig.pos="h"}
+
+knitr::include_graphics(here("figures", "sem_frame_diagram.png"))
+```
+
+*Figure*. Picture has been adapted from study by Múthen, 2006.
 
 ______________________________________________
 
@@ -64,7 +77,8 @@ library(semPlot)
 library(reshape2)
 library(cowplot)
 library(filesstrings)
-library(hrbrthemes)
+library(poLCA)
+
 ```
 
 ____________________________________
@@ -129,7 +143,7 @@ Run a quick LCA using `createMixtures`
 createMixtures(classes = 1:4, filename_stem = "cheat",                                       #
                   rdata = df_cheat,                                                          #
                ANALYSIS = "processors = 10; starts 500 100;",                                #     
-               VARIABLE = "CATEGORICAL = lieexam-copyexam;",                                 #    
+               VARIABLE = "CATEGORICAL = lieexam-copyexam; USEVAR = lieexam-copyexam;",      #    
                    PLOT = "type = plot3; series = lieexam-copyexam(*);")                     #                
 
 files <- data.frame(names = list.files(path = here(), full.names = FALSE))
@@ -224,7 +238,6 @@ ______________________________________________
 
 knitr::include_graphics(here("figures", "LCA_Diagram_SEMLAB8.png"))
 ```
-
 
 Load data
 ```{r, eval=TRUE}
@@ -560,6 +573,10 @@ ggplot(pd_long1, aes(Var, value, shape = variable,                              
 ggsave(here("figures","Class4_KSEP_LCA_plot.png"),             #    
        dpi=300, height=4, width=6, units="in")                 #
 ```
+
+______________________________________________
+
+# [Lab Materials - Return to Home Page](https://garberadamc.github.io/project-site/)
 
 ______________________________________________
 
